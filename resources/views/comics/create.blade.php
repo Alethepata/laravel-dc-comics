@@ -49,6 +49,8 @@
                 <label for="writers">Writers</label>
             </div>
 
+            <button type="submit" class="btn btn-success">Invia</button>
+            <button type="reset" class="btn btn-danger">Cancella</button>
 
         </form>
     </div>
