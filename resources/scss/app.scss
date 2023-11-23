@@ -1,6 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 
-a{
+.topbar a{
     text-decoration: none;
     margin-right: 30px;
     color: darkcyan;
@@ -12,9 +12,12 @@ a{
     &:hover{
         scale:1.1;
     }
-    img{
+    img,
+    a{
         width: 100%;
         height: 100%;
+    }
+    img{
         object-fit: cover;
     }
 }
