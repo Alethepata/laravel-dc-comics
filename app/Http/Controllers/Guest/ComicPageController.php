@@ -17,7 +17,7 @@ class ComicPageController extends Controller
     public function index()
     {
         $comics = Comic::all();
-        return view('crud.index', compact('comics'));
+        return view('comics.index', compact('comics'));
     }
 
     /**
@@ -50,7 +50,7 @@ class ComicPageController extends Controller
     public function show($id)
     {
         $comic = Comic::find($id);
-        return view('crud.show',compact('comic'));
+        return view('comics.show',compact('comic'));
     }
 
     /**
