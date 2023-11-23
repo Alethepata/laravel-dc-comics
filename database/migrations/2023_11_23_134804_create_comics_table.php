@@ -18,10 +18,10 @@ return new class extends Migration
             $table->string('title');
             $table->string('slag')->unique();
             $table->text('description');
-            $table->string('thumb');
+            $table->text('thumb');
             $table->string('price', 10);
             $table->string('series',100);
-            $table->date('sale_date');
+            $table->string('sale_date');
             $table->string('type',100);
             $table->string('artists');
             $table->string('writers');
