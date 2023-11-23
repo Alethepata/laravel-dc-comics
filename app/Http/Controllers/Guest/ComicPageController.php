@@ -49,7 +49,8 @@ class ComicPageController extends Controller
      */
     public function show($id)
     {
-        //
+        $comic = Comic::find($id);
+        return view('crud.show',compact('comic'));
     }
 
     /**
