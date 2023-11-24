@@ -2,36 +2,41 @@
 
 @section('content')
 
-    <h1>Fumetto {{$comic->title}}</h1>
-    <a href="{{route('comics.edit', $comic)}}" class="btn btn-warning">Edit</a>
+    <div class="show rounded-5">
 
-    <form
-    action="{{ route('comics.destroy', $comic) }}"
-    method="POST"
-    onsubmit="return confirm ('Cancellare {{$comic->title}}?')"
-    >
-        @csrf
-        @method('DELETE')
-        <button type="submit" class="btn btn-danger">Delete</button>
-    </form>
+        <h1>Fumetto {{$comic->title}}</h1>
+        <div class="button d-flex">
+            <a href="{{route('comics.edit', $comic)}}" class="btn btn_edit me-3">Edit</a>
+
+            <form
+            action="{{ route('comics.destroy', $comic) }}"
+            method="POST"
+            onsubmit="return confirm ('Cancellare {{$comic->title}}?')"
+            >
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn_delete">Delete</button>
+            </form>
+        </div>
 
         <div class="content text-center">
             <div class="image">
-                <img class="w-25" src="{{$comic->thumb}}" alt="">
+                <img src="{{$comic->thumb}}" alt="">
             </div>
 
             <div class="text my-3">
                 <h2>{{$comic->title}}</h2>
+                <h4>Price: {{$comic->price}}</h4>
                 <p>{{$comic->description}}</p>
                 <p>
                     Series: {{$comic->series}} |
                     Type: {{$comic->type}} |
-                    Sale date: {{$comic->sale_date}} |
-                    Price: {{$comic->price}}
+                    Sale date: {{$comic->sale_date}}
                 </p>
 
             </div>
 
         </div>
+    </div>
 
 @endsection
