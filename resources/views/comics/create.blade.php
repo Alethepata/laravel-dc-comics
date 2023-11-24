@@ -5,7 +5,7 @@
     <h1>Aggiungi fumetto</h1>
 
     <div class="form my-5">
-        <form action="{{'comics.store'}}" method="POST">
+        <form action="{{route('comics.store')}}" method="POST">
         @csrf
 
             <div class="form-floating my-3">
